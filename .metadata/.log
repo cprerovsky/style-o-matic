@@ -1,0 +1,9 @@
+!SESSION 2012-04-07 16:08:58.155 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_31
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=de_AT
+Command-line arguments:  -os win32 -ws win32 -arch x86 -data D:\clemens\Documents\My Dropbox\FH\FH Share\2012 SS\MOB - Mobile Computing\workspace
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2012-04-07 16:11:16.124
+!MESSAGE Failed to load properties file for project 'style-o-matic'
