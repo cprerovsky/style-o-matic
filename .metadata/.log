@@ -7,3 +7,9 @@ Command-line arguments:  -os win32 -ws win32 -arch x86 -data D:\clemens\Document
 
 !ENTRY com.android.ide.eclipse.adt 4 0 2012-04-07 16:11:16.124
 !MESSAGE Failed to load properties file for project 'style-o-matic'
+
+!ENTRY org.eclipse.ui 4 4 2012-04-07 16:18:51.317
+!MESSAGE Invalid preference page path: XML Syntax
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2012-04-07 16:30:46.127
+!MESSAGE Failed to load properties file for project 'style-o-matic'
