@@ -18,7 +18,7 @@ public class main extends Activity {
         cameraButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Intent goCamera = new Intent(v.getContext(), camera.class);
+				Intent goCamera = new Intent(v.getContext(), Camera.class);
 				startActivityForResult(goCamera, 0);
 			}
 		});

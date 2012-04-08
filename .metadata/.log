@@ -13,3 +13,15 @@ Command-line arguments:  -os win32 -ws win32 -arch x86 -data D:\clemens\Document
 
 !ENTRY com.android.ide.eclipse.adt 4 0 2012-04-07 16:30:46.127
 !MESSAGE Failed to load properties file for project 'style-o-matic'
+!SESSION 2012-04-08 23:18:31.157 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_31
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=de_AT
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 4 4 2012-04-08 23:23:06.590
+!MESSAGE Invalid preference page path: XML Syntax
+
+!ENTRY org.eclipse.ui 4 4 2012-04-08 23:34:24.035
+!MESSAGE Referenced part does not exist yet: org.eclipse.ui.views.ProblemView.
