@@ -97,8 +97,7 @@ public class CameraPreview extends Activity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-    	return true;
-    	// Handle item selection
+        // Handle item selection
 //        switch (item.getItemId()) {
 //        case R.id.switch_cam:
 //            // check for availability of multiple cameras

@@ -19,7 +19,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="CameraPreview" android:label="Camera"></activity>
+        <activity android:name=".Camera"></activity>
     </application>
 
 </manifest>

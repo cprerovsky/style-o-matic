@@ -7,7 +7,8 @@
 <fullyQualifiedTypeName name="android.view.View"/>
 <fullyQualifiedTypeName name="android.content.Intent"/>
 <fullyQualifiedTypeName name="at.stoegprer.android.camera"/>
-<fullyQualifiedTypeName name="at.stoegprer.android.CameraPreview"/>
 <fullyQualifiedTypeName name="android.widget.FrameLayout"/>
 <fullyQualifiedTypeName name="at.stoegprer.android.R.id"/>
+<fullyQualifiedTypeName name="CameraPreviewActivity"/>
+<fullyQualifiedTypeName name="at.stoegprer.android.CameraPreview"/>
 </qualifiedTypeNameHistroy>

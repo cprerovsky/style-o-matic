@@ -23,7 +23,7 @@ import java.util.List;
 
 // Need the following import to get access to the app resources, since this
 // class is in a sub-package.
-//import com.example.android.apis.R;
+import com.example.android.apis.R;
 
 // ----------------------------------------------------------------------
 
@@ -92,13 +92,11 @@ public class CameraPreview extends Activity {
 //        MenuInflater inflater = getMenuInflater();
 //        inflater.inflate(R.menu.camera_menu, menu);
 //        return true;
-    	return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-    	return true;
-    	// Handle item selection
+        // Handle item selection
 //        switch (item.getItemId()) {
 //        case R.id.switch_cam:
 //            // check for availability of multiple cameras
