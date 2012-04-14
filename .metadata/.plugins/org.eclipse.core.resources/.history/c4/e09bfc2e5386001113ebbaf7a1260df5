@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, main! This is almost too easy :9</string>
+    <string name="app_name">Style-o-matic</string>
+
+</resources>

@@ -1,0 +1,14 @@
+package at.stoegprer.android;
+
+import android.app.Activity;
+import android.os.Bundle;
+
+public class ItemPicker extends Activity {
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.itempicker);
+		
+		// link buttons to start camera
+	}
+}

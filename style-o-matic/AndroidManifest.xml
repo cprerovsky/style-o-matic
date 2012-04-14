@@ -20,6 +20,8 @@
             </intent-filter>
         </activity>
         <activity android:name="CameraPreview" android:label="Camera"></activity>
+        <activity android:name="Camera"></activity>
+        <activity android:name="ItemPicker"></activity>
     </application>
 
 </manifest>
