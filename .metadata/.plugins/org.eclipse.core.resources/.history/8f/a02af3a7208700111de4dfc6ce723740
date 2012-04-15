@@ -85,11 +85,13 @@ public class ItemPicker extends Activity {
 			cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(getPicUri(this)) );
 		} catch (Exception e) {
 			Log.e(getClass().toString(), e.getMessage());
-			// TODO yah, well exception handling could be better here...
 			return;
 		}
         // TODO maybe hide action icons?
         
+//		Intent cameraIntent = new Intent(
+//				android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+		
 		startActivityForResult(cameraIntent, CAMERA_PIC_REQUEST);
 	}
 
@@ -129,14 +131,18 @@ public class ItemPicker extends Activity {
 		return new File(path, date.getTime() + ".jpg");
 	} 
 	
-	/**
-	 * picture has been received from the camera
-	 */
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-		if (resultCode == RESULT_OK) {
+		if (resultCode != RESULT_OK) {
 			Log.i(getClass().toString(), "Problem when receiving image from camera intent");
-		} else {			
-			// TODO inform user that pic was successfully taken
+			return;
 		}
+		//		if (requestCode == CAMERA_PIC_REQUEST) {
+		//			// do something
+		//		}
+		
+		// TODO save pic to folder
+		
+		
+		Log.i(getClass().toString(), "Received image. Current pic type is " + currentPicType.toString());
 	}
 }

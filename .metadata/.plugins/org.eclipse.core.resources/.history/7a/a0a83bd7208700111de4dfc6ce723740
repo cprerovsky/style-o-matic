@@ -129,14 +129,13 @@ public class ItemPicker extends Activity {
 		return new File(path, date.getTime() + ".jpg");
 	} 
 	
-	/**
-	 * picture has been received from the camera
-	 */
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-		if (resultCode == RESULT_OK) {
-			Log.i(getClass().toString(), "Problem when receiving image from camera intent");
-		} else {			
+		if (resultCode != RESULT_OK) {
 			// TODO inform user that pic was successfully taken
+			Log.i(getClass().toString(), "Problem when receiving image from camera intent");
+			return;
 		}
+
+		Log.i(getClass().toString(), "Received image. Current pic type is " + currentPicType.toString());
 	}
 }

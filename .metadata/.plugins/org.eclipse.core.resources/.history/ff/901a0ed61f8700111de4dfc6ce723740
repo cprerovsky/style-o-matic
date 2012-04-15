@@ -1,0 +1,5 @@
+package at.stoegprer.android;
+
+public final static class OutDir {
+
+}

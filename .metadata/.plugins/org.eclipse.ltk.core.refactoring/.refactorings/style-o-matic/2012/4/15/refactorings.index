@@ -3,3 +3,7 @@
 1334424904312	Delete element
 1334508812515	Rename local variable 'intent'
 1334509191163	Rename method 'getTempFile'
+1334510768907	Rename field 'OUT_DIR_ACCESSORIES'
+1334510775260	Rename field 'OUT_DIR_TOPS'
+1334510779906	Rename field 'OUT_DIR_BOTTOMS'
+1334510786996	Rename field 'OUT_DIR_SHOES'
