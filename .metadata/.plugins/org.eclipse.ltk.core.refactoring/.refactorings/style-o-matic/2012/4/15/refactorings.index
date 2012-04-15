@@ -1,3 +1,5 @@
 1333990435457	Delete element
 1334405692348	Rename type 'main'
 1334424904312	Delete element
+1334508812515	Rename local variable 'intent'
+1334509191163	Rename method 'getTempFile'
