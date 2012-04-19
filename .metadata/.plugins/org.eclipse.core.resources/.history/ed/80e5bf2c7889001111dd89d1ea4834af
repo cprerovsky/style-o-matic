@@ -1,0 +1,81 @@
+package at.stoegprer.android;
+
+import java.io.File;
+
+import android.content.Context;
+import android.content.res.TypedArray;
+import android.net.Uri;
+import android.os.Environment;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.Gallery;
+import android.widget.ImageView;
+
+public class ImageAdapter extends BaseAdapter {
+
+	int mGalleryItemBackground;
+    private Context mContext;
+	private Uri[] imgUris;
+	private File picDirectory;
+
+    private Integer[] mImageIds;
+
+    // TODO integer parameter rausschmeiﬂen!!!!
+    public ImageAdapter(Context c, Integer[] imgIds, String type) {
+        mContext = c;
+        mImageIds = imgIds;
+        TypedArray attr = mContext.obtainStyledAttributes(R.styleable.HelloGallery);
+        mGalleryItemBackground = attr.getResourceId(
+                R.styleable.HelloGallery_android_galleryItemBackground, 0);
+        attr.recycle();
+        this.picDirectory =new File(Environment.getExternalStorageDirectory(), type);
+        init();
+    }
+    
+    private void init(){
+    	File path = mContext.getExternalFilesDir(Environment.DIRECTORY_PICTURES);
+	    if (picDirectory != null) {
+	    	imgUris = new Uri[path.listFiles().length];
+	        for(int i = 0; i < path.listFiles().length; i++){
+	        	imgUris[i] = Uri.parse(path.listFiles()[i].getAbsolutePath());
+	        }
+	    }
+    }
+
+    public int getCount() {
+    	 // wieder einkommentieren
+//    	File path = mContext.getExternalFilesDir(Environment.DIRECTORY_PICTURES);
+	    if (picDirectory != null) {
+	        return picDirectory.listFiles().length;
+	    }
+        return mImageIds.length;
+    }
+
+    public Object getItem(int position) {
+        return position;
+    }
+
+    public long getItemId(int position) {
+        return position;
+    }
+
+    public View getView(int position, View convertView, ViewGroup parent) {
+        ImageView imageView = new ImageView(mContext);
+
+        File path = mContext.getExternalFilesDir(Environment.DIRECTORY_PICTURES);
+	    if (picDirectory != null) {
+	    	imageView.setImageURI(imgUris[position]);
+	    }else{
+	    	// kann sp‰ter rausgeschmissen werden
+	    	imageView.setImageResource(mImageIds[position]);
+	    }
+	    
+        imageView.setLayoutParams(new Gallery.LayoutParams(300, 200));
+        imageView.setScaleType(ImageView.ScaleType.FIT_XY);
+        imageView.setBackgroundResource(mGalleryItemBackground);
+
+        return imageView;
+
+    }
+}

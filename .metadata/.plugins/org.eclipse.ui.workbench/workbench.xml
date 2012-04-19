@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workbench progressCount="23" version="2.0">
 <workbenchAdvisor/>
-<window height="768" maximized="true" width="1024" x="62" y="0">
+<window height="768" maximized="true" width="1024" x="405" y="5">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -18,12 +18,12 @@
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="76" y="22"/>
 <coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="107" y="22"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="61" y="22"/>
+<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="com.android.ide.eclipse.editors.CommonXmlEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="com.android.ide.eclipse.editors.CommonXmlEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
@@ -36,31 +36,16 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
-<part id="2"/>
-<part id="3"/>
-<part id="4"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CameraPreview.java" partName="CameraPreview.java" path="D:/clemens/Documents/My Dropbox/FH/FH Share/2012 SS/MOB - Mobile Computing/workspace/style-o-matic/src/at/stoegprer/android/CameraPreview.java" title="CameraPreview.java" tooltip="style-o-matic/src/at/stoegprer/android/CameraPreview.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/style-o-matic/src/at/stoegprer/android/CameraPreview.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="6059" selectionTopPixel="2928"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Main.java" partName="Main.java" path="D:/clemens/Documents/My Dropbox/FH/FH Share/2012 SS/MOB - Mobile Computing/workspace/style-o-matic/src/at/stoegprer/android/Main.java" title="Main.java" tooltip="style-o-matic/src/at/stoegprer/android/Main.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/style-o-matic/src/at/stoegprer/android/Main.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="192" selectionOffset="569" selectionTopPixel="0"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ItemPicker.java" partName="ItemPicker.java" path="D:/clemens/Documents/My Dropbox/FH/FH Share/2012 SS/MOB - Mobile Computing/workspace/style-o-matic/src/at/stoegprer/android/ItemPicker.java" title="ItemPicker.java" tooltip="style-o-matic/src/at/stoegprer/android/ItemPicker.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/style-o-matic/src/at/stoegprer/android/ItemPicker.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2274" selectionTopPixel="0"/>
-</editor>
-<editor id="com.android.ide.eclipse.editors.manifest.ManifestEditor" name="AndroidManifest.xml" partName="style-o-matic Manifest" path="D:/clemens/Documents/My Dropbox/FH/FH Share/2012 SS/MOB - Mobile Computing/workspace/style-o-matic/AndroidManifest.xml" title="style-o-matic Manifest" tooltip="style-o-matic/AndroidManifest.xml" workbook="DefaultEditorWorkbook">
+<editor id="com.android.ide.eclipse.editors.manifest.ManifestEditor" name="AndroidManifest.xml" partName="style-o-matic Manifest" path="C:/Users/steffi/Dropbox/FH Share/2012 SS/MOB - Mobile Computing/workspace/style-o-matic/AndroidManifest.xml" title="style-o-matic Manifest" tooltip="style-o-matic/AndroidManifest.xml" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/style-o-matic/AndroidManifest.xml"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Camera.java" partName="Camera.java" path="D:/clemens/Documents/My Dropbox/FH/FH Share/2012 SS/MOB - Mobile Computing/workspace/style-o-matic/src/at/stoegprer/android/Camera.java" title="Camera.java" tooltip="style-o-matic/src/at/stoegprer/android/Camera.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/style-o-matic/src/at/stoegprer/android/Camera.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="185" selectionOffset="680" selectionTopPixel="0"/>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Main.java" partName="Main.java" path="C:/Users/steffi/Dropbox/FH Share/2012 SS/MOB - Mobile Computing/workspace/style-o-matic/src/at/stoegprer/android/Main.java" title="Main.java" tooltip="style-o-matic/src/at/stoegprer/android/Main.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/style-o-matic/src/at/stoegprer/android/Main.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1970" selectionTopPixel="301"/>
 </editor>
 </editors>
 <views>
@@ -70,15 +55,8 @@
 <view id="com.android.ide.eclipse.ddms.views.LogCatView" partName="LogCat">
 <viewState/>
 </view>
-<view id="org.eclipse.debug.ui.DebugView" partName="Debug">
-<viewState/>
-</view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<expanded>
-<category IMemento.internal.id="Warnings (4 items)"/>
-<category IMemento.internal.id="Errors"/>
-</expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
@@ -86,6 +64,9 @@
 <visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
 </viewState>
+</view>
+<view id="org.eclipse.debug.ui.DebugView" partName="Debug">
+<viewState/>
 </view>
 <view id="org.eclipse.ui.console.ConsoleView" partName="Console">
 <viewState/>
@@ -126,10 +107,10 @@
 <viewState/>
 </view>
 <view id="org.eclipse.ui.views.TaskList" partName="Tasks"/>
+<view id="org.eclipse.jdt.ui.SourceView" partName="Declaration"/>
 <view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
 <viewState/>
 </view>
-<view id="org.eclipse.jdt.ui.SourceView" partName="Declaration"/>
 <view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc"/>
 </views>
 <perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
@@ -194,12 +175,12 @@
 <view id="org.eclipse.ui.views.ContentOutline"/>
 <view id="org.eclipse.jdt.ui.PackageExplorer"/>
 <fastViewBars>
-<fastViewBar fastViewLocation="1024" id="bottom" orientation="256" selectedTabId="com.android.ide.eclipse.ddms.views.LogCatView" style="0">
+<fastViewBar fastViewLocation="1024" id="bottom" orientation="256" selectedTabId="org.eclipse.ui.console.ConsoleView" style="0">
 <fastViews>
 <view id="org.eclipse.ui.views.ProblemView" ratio="0.3"/>
 <view id="org.eclipse.jdt.ui.JavadocView" ratio="0.3"/>
 <view id="org.eclipse.jdt.ui.SourceView" ratio="0.3"/>
-<view id="org.eclipse.ui.console.ConsoleView" ratio="0.3"/>
+<view id="org.eclipse.ui.console.ConsoleView" ratio="0.29803923"/>
 <view id="com.android.ide.eclipse.ddms.views.LogCatView" ratio="0.29864255"/>
 </fastViews>
 </fastViewBar>
@@ -228,7 +209,7 @@
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.1771075" ratioLeft="229" ratioRight="1064" relationship="2" relative="left"/>
 <info folder="true" part="bottom" ratio="0.35151514" ratioLeft="232" ratioRight="428" relationship="4" relative="org.eclipse.ui.editorss">
-<folder appearance="2" expanded="0">
+<folder appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.ui.JavadocView" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.ui.SourceView" label="LabelNotFound"/>
@@ -291,6 +272,7 @@
 <perspective_action id="org.eclipse.wst.xml.ui.perspective"/>
 <hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<view id="com.android.ide.eclipse.ddms.views.LogCatView"/>
 <view id="org.eclipse.ui.console.ConsoleView"/>
 <view id="org.eclipse.ui.views.TaskList"/>
 <view id="org.eclipse.debug.ui.DebugView"/>
@@ -298,49 +280,67 @@
 <view id="org.eclipse.debug.ui.BreakpointView"/>
 <view id="org.eclipse.debug.ui.ExpressionView"/>
 <view id="org.eclipse.ui.views.ContentOutline"/>
-<view id="com.android.ide.eclipse.ddms.views.LogCatView"/>
 <fastViewBars/>
-<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
+<layout>
+<mainWindow>
+<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">
+<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
 <page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.ui.PackageExplorer" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="972" ratioRight="324" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="972" ratioRight="324" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.74962294" ratioLeft="497" ratioRight="166" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.46194226" ratioLeft="352" ratioRight="410" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.PropertySheet" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.debug.ui.DisplayView" label="LabelNotFound"/>
 <page content="org.eclipse.search.SearchResultView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 <part id="1"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@1b39e5e" ratio="0.5" ratioLeft="648" ratioRight="648" relationship="2" relative="org.eclipse.debug.internal.ui.ConsoleFolderView">&#x0A;<folder activePageID="com.android.ide.eclipse.ddms.views.LogCatView" appearance="2" expanded="2">&#x0A;<page content="com.android.ide.eclipse.ddms.views.LogCatView" label="LogCat"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@1b39e5e" ratio="0.3285085" ratioLeft="522" ratioRight="1067" relationship="2" relative="org.eclipse.debug.internal.ui.ConsoleFolderView">
+<folder activePageID="com.android.ide.eclipse.ddms.views.LogCatView" appearance="2" expanded="2">
+<page content="com.android.ide.eclipse.ddms.views.LogCatView" label="LogCat"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 </presentation>
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.44869214" ratioLeft="223" ratioRight="274" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView"/>
-<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.75" ratioLeft="972" ratioRight="324" relationship="2" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.75" ratioLeft="972" ratioRight="324" relationship="2" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
 <page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.5" ratioLeft="648" ratioRight="648" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.ExpressionView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.5" ratioLeft="648" ratioRight="648" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder activePageID="org.eclipse.debug.ui.BreakpointView" appearance="2" expanded="2">
+<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
 <page content="org.eclipse.debug.ui.BreakpointView" label="Breakpoints"/>
 <page content="org.eclipse.debug.ui.ExpressionView" label="Expressions"/>
 <page content="org.eclipse.debug.ui.RegisterView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 <part id="1"/>
 <part id="2"/>
 </presentation>
@@ -353,155 +353,12 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/style-o-matic/src/at/stoegprer/android/Main.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/style-o-matic/src/at/stoegprer/android/CameraPreview.java"/>
-<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=style-o-matic/C:\/Program Files\/Android\/android-sdk\/platforms\/android-10\/android.jar&lt;android.hardware(Camera.class"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/style-o-matic/src/at/stoegprer/android/Camera.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" path="/style-o-matic/res/layout/itempicker.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/style-o-matic/src/at/stoegprer/android/ItemPicker.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.manifest.ManifestEditor" path="/style-o-matic/AndroidManifest.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/style-o-matic/src/at/stoegprer/android/Main.java"/>
 </editors>
-<item historyLabel="CameraPreview.java" index="1">
-<position/>
-</item>
-<item historyLabel="CameraPreview.java" index="1">
-<position info="not_deleted" x="7564" y="8"/>
-</item>
-<item historyLabel="CameraPreview.java" index="1">
-<position info="not_deleted" x="6149" y="0"/>
-</item>
-<item historyLabel="CameraPreview.java" index="1">
-<position info="not_deleted" x="7564" y="8"/>
-</item>
-<item historyLabel="CameraPreview.java" index="1">
-<position/>
-</item>
-<item historyLabel="CameraPreview.java" index="1">
-<position/>
-</item>
-<item historyLabel="CameraPreview.java" index="1">
-<position/>
-</item>
-<item historyLabel="CameraPreview.java" index="1">
-<position info="not_deleted" x="10941" y="0"/>
-</item>
-<item historyLabel="Camera.class" index="2">
+<item historyLabel="style-o-matic Manifest" index="0"/>
+<item active="true" historyLabel="Main.java" index="1">
 <position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="CameraPreview.java" index="1">
-<position info="not_deleted" x="6059" y="0"/>
-</item>
-<item historyLabel="itempicker.xml" index="4"/>
-<item historyLabel="CameraPreview.java" index="1">
-<position info="not_deleted" x="6059" y="0"/>
-</item>
-<item historyLabel="itempicker.xml" index="4">
-<position/>
-</item>
-<item historyLabel="CameraPreview.java" index="1">
-<position info="not_deleted" x="6059" y="0"/>
-</item>
-<item historyLabel="itempicker.xml" index="4"/>
-<item historyLabel="CameraPreview.java" index="1">
-<position info="not_deleted" x="6059" y="0"/>
-</item>
-<item historyLabel="itempicker.xml" index="4"/>
-<item historyLabel="ItemPicker.java" index="5">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="ItemPicker.java" index="5">
-<position info="not_deleted" x="1744" y="0"/>
-</item>
-<item historyLabel="style-o-matic Manifest" index="6"/>
-<item historyLabel="Main.java" index="0">
-<position info="not_deleted" x="703" y="0"/>
-</item>
-<item historyLabel="ItemPicker.java" index="5">
-<position info="not_deleted" x="1744" y="0"/>
-</item>
-<item historyLabel="Main.java" index="0">
-<position info="not_deleted" x="703" y="0"/>
-</item>
-<item historyLabel="ItemPicker.java" index="5">
-<position info="not_deleted" x="1744" y="0"/>
-</item>
-<item historyLabel="Camera.java" index="3">
-<position info="not_deleted" x="512" y="150"/>
-</item>
-<item historyLabel="ItemPicker.java" index="5">
-<position info="not_deleted" x="1744" y="0"/>
-</item>
-<item historyLabel="ItemPicker.java" index="5">
-<position info="not_deleted" x="2067" y="0"/>
-</item>
-<item historyLabel="Camera.java" index="3">
-<position info="not_deleted" x="223" y="51"/>
-</item>
-<item historyLabel="ItemPicker.java" index="5">
-<position/>
-</item>
-<item historyLabel="Camera.java" index="3">
-<position info="not_deleted" x="680" y="185"/>
-</item>
-<item historyLabel="ItemPicker.java" index="5">
-<position info="not_deleted" x="617" y="0"/>
-</item>
-<item historyLabel="Camera.java" index="3">
-<position info="not_deleted" x="680" y="185"/>
-</item>
-<item historyLabel="Main.java" index="0">
-<position info="not_deleted" x="703" y="0"/>
-</item>
-<item historyLabel="ItemPicker.java" index="5">
-<position info="not_deleted" x="1372" y="0"/>
-</item>
-<item historyLabel="Camera.java" index="3">
-<position info="not_deleted" x="680" y="185"/>
-</item>
-<item historyLabel="Main.java" index="0">
-<position info="not_deleted" x="703" y="0"/>
-</item>
-<item historyLabel="ItemPicker.java" index="5">
-<position info="not_deleted" x="1372" y="0"/>
-</item>
-<item historyLabel="ItemPicker.java" index="5">
-<position info="not_deleted" x="1744" y="0"/>
-</item>
-<item historyLabel="Main.java" index="0">
-<position info="not_deleted" x="703" y="0"/>
-</item>
-<item historyLabel="ItemPicker.java" index="5">
-<position info="not_deleted" x="1420" y="0"/>
-</item>
-<item historyLabel="Main.java" index="0">
-<position info="not_deleted" x="703" y="0"/>
-</item>
-<item historyLabel="ItemPicker.java" index="5">
-<position info="not_deleted" x="1420" y="0"/>
-</item>
-<item historyLabel="Main.java" index="0">
-<position info="not_deleted" x="569" y="192"/>
-</item>
-<item historyLabel="ItemPicker.java" index="5">
-<position info="not_deleted" x="1420" y="0"/>
-</item>
-<item historyLabel="ItemPicker.java" index="5">
-<position info="not_deleted" x="1522" y="0"/>
-</item>
-<item historyLabel="ItemPicker.java" index="5">
-<position info="not_deleted" x="1262" y="1"/>
-</item>
-<item historyLabel="ItemPicker.java" index="5">
-<position info="not_deleted" x="1264" y="0"/>
-</item>
-<item historyLabel="ItemPicker.java" index="5">
-<position info="not_deleted" x="1262" y="1"/>
-</item>
-<item historyLabel="ItemPicker.java" index="5">
-<position info="not_deleted" x="953" y="0"/>
-</item>
-<item active="true" historyLabel="ItemPicker.java" index="5">
-<position/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -509,13 +366,6 @@
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
-<trimArea IMemento.internal.id="16384">
-<trimItem IMemento.internal.id="left"/>
-</trimArea>
-<trimArea IMemento.internal.id="131072">
-<trimItem IMemento.internal.id="right"/>
-<trimItem IMemento.internal.id="org.eclipse.ui.editorss"/>
-</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 </trimArea>
@@ -528,8 +378,8 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Camera.java" tooltip="style-o-matic/src/at/stoegprer/android/Camera.java">
-<persistable path="/style-o-matic/src/at/stoegprer/android/Camera.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Main.java" tooltip="style-o-matic/src/at/stoegprer/android/Main.java">
+<persistable path="/style-o-matic/src/at/stoegprer/android/Main.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.manifest.ManifestEditor" name="AndroidManifest.xml" tooltip="style-o-matic/AndroidManifest.xml">
 <persistable path="/style-o-matic/AndroidManifest.xml"/>
@@ -537,41 +387,35 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ItemPicker.java" tooltip="style-o-matic/src/at/stoegprer/android/ItemPicker.java">
 <persistable path="/style-o-matic/src/at/stoegprer/android/ItemPicker.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="itempicker.xml" tooltip="style-o-matic/res/layout/itempicker.xml">
-<persistable path="/style-o-matic/res/layout/itempicker.xml"/>
-</file>
-<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="Camera.class" tooltip="android.hardware.Camera">
-<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=style-o-matic/C:\/Program Files\/Android\/android-sdk\/platforms\/android-10\/android.jar&lt;android.hardware(Camera.class"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="strings.xml" tooltip="style-o-matic/res/values/strings.xml">
 <persistable path="/style-o-matic/res/values/strings.xml"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="camera.xml" tooltip="style-o-matic/res/layout/camera.xml">
-<persistable path="/style-o-matic/res/layout/camera.xml"/>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="InvocationTargetException.class" tooltip="java.lang.reflect.InvocationTargetException">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=style-o-matic/C:\/Program Files\/Android\/android-sdk\/platforms\/android-10\/android.jar&lt;java.lang.reflect(InvocationTargetException.class"/>
 </file>
-<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="SurfaceView.class" tooltip="android.view.SurfaceView">
-<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=style-o-matic/C:\/Program Files\/Android\/android-sdk\/platforms\/android-10\/android.jar&lt;android.view(SurfaceView.class"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Camera.java" tooltip="style-o-matic/src/at/stoegprer/android/Camera.java">
+<persistable path="/style-o-matic/src/at/stoegprer/android/Camera.java"/>
 </file>
-<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="Camera$Size.class" tooltip="android.hardware.Camera$Size">
-<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=style-o-matic/C:\/Program Files\/Android\/android-sdk\/platforms\/android-10\/android.jar&lt;android.hardware(Camera$Size.class"/>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="Instrumentation.class" tooltip="android.app.Instrumentation">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=style-o-matic/C:\/Program Files\/Android\/android-sdk\/platforms\/android-10\/android.jar&lt;android.app(Instrumentation.class"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="main.java" tooltip="style-o-matic/src/at/stoegprer/android/main.java">
-<persistable path="/style-o-matic/src/at/stoegprer/android/main.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="styles.xml" tooltip="style-o-matic/res/values/styles.xml">
+<persistable path="/style-o-matic/res/values/styles.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ImageAdapter.java" tooltip="style-o-matic/src/at/stoegprer/android/ImageAdapter.java">
+<persistable path="/style-o-matic/src/at/stoegprer/android/ImageAdapter.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CameraPreview.java" tooltip="style-o-matic/src/at/stoegprer/android/CameraPreview.java">
 <persistable path="/style-o-matic/src/at/stoegprer/android/CameraPreview.java"/>
 </file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.android.ide.eclipse.editors.manifest.ManifestEditor" name="AndroidManifest.xml" tooltip="C:\Users\Clemens\workspace-android\CameraPreview\AndroidManifest.xml">
-<persistable uri="file:/C:/Users/Clemens/workspace-android/CameraPreview/AndroidManifest.xml"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GridImageAdapter.java" tooltip="style-o-matic/src/at/stoegprer/android/GridImageAdapter.java">
+<persistable path="/style-o-matic/src/at/stoegprer/android/GridImageAdapter.java"/>
 </file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="main.xml" tooltip="C:\Users\Clemens\workspace-android\CameraPreview\res\layout\main.xml">
-<persistable uri="file:/C:/Users/Clemens/workspace-android/CameraPreview/res/layout/main.xml"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="main.xml" tooltip="style-o-matic/res/layout/main.xml">
+<persistable path="/style-o-matic/res/layout/main.xml"/>
 </file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Preview.java" tooltip="C:\Users\Clemens\workspace-android\CameraPreview\src\at\prerovsky\android\Preview.java">
-<persistable uri="file:/C:/Users/Clemens/workspace-android/CameraPreview/src/at/prerovsky/android/Preview.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="R.java" tooltip="style-o-matic/gen/at/stoegprer/android/R.java">
-<persistable path="/style-o-matic/gen/at/stoegprer/android/R.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="OutDir.java" tooltip="style-o-matic/src/at/stoegprer/android/OutDir.java">
+<persistable path="/style-o-matic/src/at/stoegprer/android/OutDir.java"/>
 </file>
 </mruList>
 </workbench>

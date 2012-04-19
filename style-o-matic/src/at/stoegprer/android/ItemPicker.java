@@ -88,7 +88,6 @@ public class ItemPicker extends Activity {
 			// TODO yah, well exception handling could be better here...
 			return;
 		}
-        // TODO maybe hide action icons?
         
 		startActivityForResult(cameraIntent, CAMERA_PIC_REQUEST);
 	}

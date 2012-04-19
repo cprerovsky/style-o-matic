@@ -1,4 +1,4 @@
-INDEX VERSION 1.126+D:\clemens\Documents\My Dropbox\FH\FH Share\2012 SS\MOB - Mobile Computing\workspace\.metadata\.plugins\org.eclipse.jdt.core
+INDEX VERSION 1.126+C:\Users\steffi\Dropbox\FH Share\2012 SS\MOB - Mobile Computing\workspace\.metadata\.plugins\org.eclipse.jdt.core
 3515653036.index
 2239131249.index
 1895151578.index

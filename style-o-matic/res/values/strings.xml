@@ -7,5 +7,10 @@
     <string name="tops">Tops</string>
     <string name="bottoms">Bottoms</string>
     <string name="shoes">Shoes</string>
+    <string name="gallery_top">Tops</string>
+	<string name="galleryBottoms">Bottoms</string>
+	<string name="galleryAccessories">Accessories</string>
+	<string name="galleryShoes">Shoes</string>
+	<string name="selectPic">Select Picture</string>
 
 </resources>

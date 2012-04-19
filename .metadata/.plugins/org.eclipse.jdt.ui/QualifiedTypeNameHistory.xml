@@ -19,7 +19,18 @@
 <fullyQualifiedTypeName name="android.widget.Button"/>
 <fullyQualifiedTypeName name="android.view.View.OnClickListener"/>
 <fullyQualifiedTypeName name="at.stoegprer.android.R.id"/>
-<fullyQualifiedTypeName name="at.stoegprer.android.ItemPicker.Type"/>
 <fullyQualifiedTypeName name="android.util.Log"/>
 <fullyQualifiedTypeName name="at.stoegprer.android.ItemPicker"/>
+<fullyQualifiedTypeName name="android.net.Uri"/>
+<fullyQualifiedTypeName name="android.provider.MediaStore.Images"/>
+<fullyQualifiedTypeName name="android.provider.MediaStore.Images.Media"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="at.stoegprer.android.ItemPicker.Type"/>
+<fullyQualifiedTypeName name="at.stoegprer.android.ItemPicker.PicType"/>
+<fullyQualifiedTypeName name="android.text.method.DateTimeKeyListener"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="java.util.Calendar"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
+<fullyQualifiedTypeName name="android.provider.MediaStore"/>
+<fullyQualifiedTypeName name="at.stoegprer.android.OutDir"/>
 </qualifiedTypeNameHistroy>
