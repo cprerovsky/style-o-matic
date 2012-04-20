@@ -130,17 +130,11 @@ public class CamView extends Activity implements SurfaceHolder.Callback {
 				
 				@Override
 				public void onPictureTaken(byte[] data, Camera camera) {
-					try {
-						file.write(data);
-						file.close();
-					} catch (IOException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
+					file.write(data);
 					
 				}
 			});
-		} catch (FileNotFoundException e) {
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}

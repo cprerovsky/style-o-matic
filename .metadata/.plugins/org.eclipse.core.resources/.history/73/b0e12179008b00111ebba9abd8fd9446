@@ -125,18 +125,12 @@ public class CamView extends Activity implements SurfaceHolder.Callback {
 			path.mkdirs();
 		}
 		try {
-			final FileOutputStream file = new FileOutputStream(new File(path, date.getTime() + ".jpg"));
+			FileOutputStream file = new FileOutputStream(new File(path, date.getTime() + ".jpg"));
 			camera.takePicture(null, null, new PictureCallback() {
 				
 				@Override
 				public void onPictureTaken(byte[] data, Camera camera) {
-					try {
-						file.write(data);
-						file.close();
-					} catch (IOException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
+					file.write(data);
 					
 				}
 			});
