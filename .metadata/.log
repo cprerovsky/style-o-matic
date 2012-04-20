@@ -2214,3 +2214,18 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 !ENTRY org.eclipse.ui 4 4 2012-04-20 16:33:30.763
 !MESSAGE Invalid preference page path: XML Syntax
+!SESSION 2012-04-20 21:36:56.534 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_29
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=de_AT
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2012-04-20 21:37:07.538
+!MESSAGE projectOpenedWithWorkspace: failed to find manifest package for project style-o-matic
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2012-04-20 21:37:11.737
+!MESSAGE fileChanged: failed to find manifest package for project style-o-matic
+
+!ENTRY org.eclipse.ui 4 4 2012-04-20 21:37:25.467
+!MESSAGE Invalid preference page path: XML Syntax

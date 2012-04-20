@@ -1,0 +1,147 @@
+package at.docstoegprer.android;
+
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.widget.EditText;
+
+public class OutfitStorage {
+
+	private final String FILENAME = "outfits";
+	
+	private static OutfitStorage instance;
+	private Context ctx;
+	
+	private HashMap<String, Outfit> outfits = new HashMap<String, Outfit>();
+	
+	private String outfitname = "";
+	
+	private OutfitStorage(Context ctx){
+		this.ctx = ctx;
+		init();
+	}
+	
+	public static OutfitStorage getInstance(Context ctx){
+		if(instance == null){
+			instance = new OutfitStorage(ctx);
+		}
+		
+		return instance;
+	}
+
+	private void init(){
+		try {
+			FileInputStream fileInput = ctx.openFileInput(FILENAME);
+			
+			 InputStreamReader inputreader = new InputStreamReader(fileInput);
+		      BufferedReader buffreader = new BufferedReader(inputreader);
+		 
+		      String line = buffreader.readLine();
+
+		      // read every line of the file into the line-variable, on line at the time
+		      while (line != null) {
+		    	  String[] outfitparams = line.split(";");
+		    	  line = buffreader.readLine();
+		    	  outfits.put(outfitparams[0], new Outfit(outfitparams[0], 
+		    			  Integer.valueOf(outfitparams[1]), 
+		    			  Integer.valueOf(outfitparams[2]), 
+		    			  Integer.valueOf(outfitparams[3]), 
+		    			  Integer.valueOf(outfitparams[4])));
+		      }
+		      
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+   public void saveOutfit( final int accessoriesPostion, 
+			final int topPostion, final int bottomPostion, final int shoesPosition){
+    	AlertDialog.Builder alert = new AlertDialog.Builder(ctx);
+    	
+    	alert.setTitle("Save");
+    	alert.setMessage("Type in an outfitname");
+
+    	// Set an EditText view to get user input 
+    	final EditText input = new EditText(ctx);
+    	alert.setView(input);
+
+    	alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+	    	public void onClick(DialogInterface dialog, int whichButton) {
+	    	  Outfit outfit = new Outfit(input.getText().toString(), accessoriesPostion, topPostion, bottomPostion, shoesPosition);
+	    	  outfits.put(input.getText().toString(), outfit);
+	  		
+		  		try{
+		  			FileOutputStream fos = ctx.openFileOutput(FILENAME, Context.MODE_PRIVATE);
+		  			for(Outfit o : outfits.values()){
+		  				fos.write(o.getSaveLine().getBytes());
+		  			}
+		  			fos.close();
+		  		}catch(IOException ex){
+		  			ex.printStackTrace();
+		  		}
+	    	 }
+    	});
+
+    	alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+    	  public void onClick(DialogInterface dialog, int whichButton) {
+    	    // Canceled.
+    	  }
+    	});
+
+    	alert.show();
+    }
+			
+	public void loadOutfit(){
+		List<CharSequence> outfitItems = new ArrayList<CharSequence>();
+		
+		for(Outfit o : outfits.values()){
+			outfitItems.add(o.getOutfitname() );
+		}
+		
+		final CharSequence[] items = outfitItems.toArray(new CharSequence[outfitItems.size()]);
+
+		AlertDialog.Builder builder = new AlertDialog.Builder(ctx);
+		builder.setTitle("Pick an outfit");
+		builder.setSingleChoiceItems(items, -1, new DialogInterface.OnClickListener() {
+		    public void onClick(DialogInterface dialog, int item) {
+		    	setOutfitname(items[item].toString());
+		    }
+		});
+		
+    	builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+	    	public void onClick(DialogInterface dialog, int whichButton) {
+	    		HelloAndroidActivity activity = (HelloAndroidActivity) ctx;
+	    		activity.setPositions(getOutfit().getAccessoriesPostion(), getOutfit().getTopPosition(), 
+	    				getOutfit().getBottomPosition(), getOutfit().getShoesPosition());
+	    	}
+    	});
+
+    	builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+    	  public void onClick(DialogInterface dialog, int whichButton) {
+    	    // Canceled.
+    	  }
+    	});
+		AlertDialog alert = builder.create();
+		alert.show();
+	}
+	
+	private void setOutfitname(String outfitname){
+		this.outfitname = outfitname;
+	}
+	
+	public Outfit getOutfit(){
+		return outfits.get(outfitname);
+	}
+}

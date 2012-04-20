@@ -1,0 +1,74 @@
+package com.example.helloandroid;
+
+public class PositionHolder {
+
+	private int topPosition = 0;
+	private int bottomPosition = 0;
+	private int shoePosition = 0;
+	private int accessoryPosition = 0;
+	
+	private static PositionHolder instance;
+	
+	public enum POSITION_TYPE { ACCESSORIES, TOPS, BOTTOMS, SHOES };
+	
+	private PositionHolder(){
+		
+	}
+
+	public static PositionHolder getInstance(){
+		if(instance == null){
+			instance = new PositionHolder();
+		}
+		return instance;
+	}
+	
+	
+	public void setPosition(POSITION_TYPE type, int position){
+		if(POSITION_TYPE.ACCESSORIES.equals(type)){
+			setAccessoryPosition(position);
+		}else if(POSITION_TYPE.TOPS.equals(type)){
+			setTopPosition(position);
+		}else if(POSITION_TYPE.BOTTOMS.equals(type)){
+			setBottomPosition(position);
+		}else if(POSITION_TYPE.SHOES.equals(type)){
+			setBottomPosition(position);
+		}
+		
+		
+	}
+	
+	public void setTopPosition(int topPosition) {
+		this.topPosition = topPosition;
+	}
+
+	public void setBottomPosition(int bottomPosition) {
+		this.bottomPosition = bottomPosition;
+	}
+
+	public void setShoePosition(int shoePosition) {
+		this.shoePosition = shoePosition;
+	}
+
+	public  void setAccessoryPosition(int accessoryPosition) {
+		this.accessoryPosition = accessoryPosition;
+	}
+
+	public int getTopPosition() {
+		return topPosition;
+	}
+
+	public int getBottomPosition() {
+		return bottomPosition;
+	}
+
+	public int getShoePosition() {
+		return shoePosition;
+	}
+
+	public int getAccessoryPosition() {
+		return accessoryPosition;
+	}
+	
+	
+	
+}

@@ -170,7 +170,7 @@ class Preview extends ViewGroup implements SurfaceHolder.Callback {
         mHolder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
         
         ToggleButton but1 = new ToggleButton(getContext());
-        but1.setText(R.string.accessories);
+        but1.setText(R.string.galleryAccessories);
 		RelativeLayout.LayoutParams rel_btn = new RelativeLayout.LayoutParams(
 				LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
 		rel_btn.height = 60;

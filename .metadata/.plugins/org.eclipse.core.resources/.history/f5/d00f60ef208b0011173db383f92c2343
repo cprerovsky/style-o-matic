@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    
+    <ViewFlipper
+	    android:id="@+id/flipper"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    >
+	    
+     	    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="vertical" >
+	    
+            <TextView
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:text="@string/hello" />
+
+    		<Button
+		        android:id="@+id/button1"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="Go to Camera" />
+
+			<Gallery 
+			    xmlns:android="http://schemas.android.com/apk/res/android"
+			    android:id="@+id/galleryTops"
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+		    />
+			<Gallery 
+			    xmlns:android="http://schemas.android.com/apk/res/android"
+			    android:id="@+id/galleryBottoms"
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+		    />
+			
+		</LinearLayout>
+		
+		<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="vertical" >
+		    	<TextView
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:text="@string/gallery_top" />
+		    	<GridView xmlns:android="http://schemas.android.com/apk/res/android" 
+				    android:id="@+id/gridviewTops"
+				    android:layout_width="fill_parent" 
+				    android:layout_height="fill_parent"
+				    android:columnWidth="90dp"
+				    android:numColumns="auto_fit"
+				    android:verticalSpacing="5dp"
+				    android:horizontalSpacing="5dp"
+				    android:stretchMode="columnWidth"
+				    android:gravity="center"
+				/>
+		</LinearLayout>
+		
+		<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="vertical" >
+			<TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hello" />
+			<Gallery 
+			    xmlns:android="http://schemas.android.com/apk/res/android"
+			    android:id="@+id/galleryShoes"
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+		    />
+			<Gallery 
+			    xmlns:android="http://schemas.android.com/apk/res/android"
+			    android:id="@+id/galleryAccessories"
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+		    />
+		</LinearLayout>
+	</ViewFlipper>
+
+</LinearLayout>

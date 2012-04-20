@@ -3,18 +3,22 @@ package at.docstoegprer.android;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
 import android.widget.Gallery;
-import android.widget.GridView;
-import android.widget.ViewFlipper;
-import at.docstoegprer.android.R;
+import at.docstoegprer.android.PositionHolder.POSITION_TYPE;
 
 public class Main extends Activity {
 	
-	ViewFlipper flipper;
+	private Gallery galleryAccessories;
+	private Gallery galleryTops;
+	private Gallery galleryBottoms;
+	private Gallery galleryShoes;
 	
     /** Called when the activity is first created. */
     @Override
@@ -32,47 +36,137 @@ public class Main extends Activity {
 			}
 		});
         
-        
-        Gallery galleryAccessories = (Gallery) findViewById(R.id.galleryAccessories);
+        galleryAccessories = (Gallery) findViewById(R.id.galleryAccessories);
         galleryAccessories.setAdapter(new ImageAdapter(this, OutDir.ACCESSORIES));
+        if(galleryAccessories.getCount() > 0){
+        	galleryAccessories.setSelection(PositionHolder.getInstance().getAccessoryPosition());
+        }
         
-        final Gallery galleryTops = (Gallery) findViewById(R.id.galleryTops);
+        galleryTops = (Gallery) findViewById(R.id.galleryTops);
         galleryTops.setAdapter(new ImageAdapter(this, OutDir.TOPS));
         
-        GridView gridViewTops = (GridView) findViewById(R.id.gridviewTops);
-        gridViewTops.setAdapter(new GridImageAdapter(this, OutDir.TOPS));
+        if (galleryTops.getCount() > 0){
+        	galleryTops.setSelection(PositionHolder.getInstance().getTopPosition());
+        }
         
-        Gallery galleryBottoms = (Gallery) findViewById(R.id.galleryBottoms);
+        galleryBottoms = (Gallery) findViewById(R.id.galleryBottoms);
         galleryBottoms.setAdapter(new ImageAdapter(this, OutDir.BOTTOMS));
+        if (galleryBottoms.getCount() > 0){
+        	galleryBottoms.setSelection(PositionHolder.getInstance().getBottomPosition());
+        }
         
-//        GridView gridViewBottoms = (GridView) findViewById(R.id.gridviewBottoms);
-//        gridViewBottoms.setAdapter(new GridImageAdapter(this, OutDir.BOTTOMS));
-        
-        Gallery galleryShoes = (Gallery) findViewById(R.id.galleryShoes);
+        galleryShoes = (Gallery) findViewById(R.id.galleryShoes);
         galleryShoes.setAdapter(new ImageAdapter(this, OutDir.SHOES));
-        
-        flipper = (ViewFlipper)findViewById(R.id.flipper);
-        flipper.setInAnimation(this, android.R.anim.fade_in);
-        flipper.setOutAnimation(this, android.R.anim.fade_out);
-        
-        
-        galleryTops.setOnItemClickListener(new OnItemClickListener() {
-        	public void onItemClick(AdapterView parent, View v, int position, long id) {
-              flipper.showNext();
+        if(galleryShoes.getCount() > 0){
+        	galleryShoes.setSelection(PositionHolder.getInstance().getShoePosition());
+        }
+
+        galleryAccessories.setOnItemClickListener(new OnItemClickListener() {
+        	@SuppressWarnings("rawtypes")
+			public void onItemClick(AdapterView parent, View v, int position, long id) {
+        		Intent myIntent = new Intent(v.getContext(), GridGalleryActivity.class);
+        		myIntent.putExtra("Type", POSITION_TYPE.ACCESSORIES);
+        		myIntent.putExtra("Path", OutDir.ACCESSORIES);
+        		myIntent.putExtra("LayoutID", R.layout.grid_gallery_accessories);
+        		myIntent.putExtra("GridViewID", R.id.gridviewAccessories);
+        		
+        		// vor dem Wechsel alle aktuell eingestellte Position aller Gallerys abspeichern
+        		setCurrentPositions();
+        		
+                startActivityForResult(myIntent, 0);
           }
 		});
         
-        
-        gridViewTops.setOnItemClickListener(new OnItemClickListener() {
-
-			public void onItemClick(AdapterView<?> arg0, View arg1, int position,
-					long arg3) {
-				System.out.println(galleryTops.getSelectedItemPosition());
-				galleryTops.setSelection(position);
-				flipper.showPrevious();
-				
-			}
-        	
+        galleryTops.setOnItemClickListener(new OnItemClickListener() {
+        	@SuppressWarnings("rawtypes")
+        	public void onItemClick(AdapterView parent, View v, int position, long id) {
+        		Intent myIntent = new Intent(v.getContext(), GridGalleryActivity.class);
+        		myIntent.putExtra("Type", POSITION_TYPE.TOPS);
+        		myIntent.putExtra("Path", OutDir.TOPS);
+        		myIntent.putExtra("LayoutID", R.layout.grid_gallery_tops);
+        		myIntent.putExtra("GridViewID", R.id.gridviewTops);
+        		
+        		// vor dem Wechsel alle aktuell eingestellte Position aller Gallerys abspeichern
+        		setCurrentPositions();
+        		
+                startActivityForResult(myIntent, 0);
+          }
 		});
+        
+        galleryBottoms.setOnItemClickListener(new OnItemClickListener() {
+        	@SuppressWarnings("rawtypes")
+        	public void onItemClick(AdapterView parent, View v, int position, long id) {
+        		Intent myIntent = new Intent(v.getContext(), GridGalleryActivity.class);
+        		myIntent.putExtra("Type", POSITION_TYPE.BOTTOMS);
+        		myIntent.putExtra("Path", OutDir.BOTTOMS);
+        		myIntent.putExtra("LayoutID", R.layout.grid_gallery_bottoms);
+        		myIntent.putExtra("GridViewID", R.id.gridviewBottoms);
+        		
+        		// vor dem Wechsel alle aktuell eingestellte Position aller Gallerys abspeichern
+        		setCurrentPositions();
+        		
+                startActivityForResult(myIntent, 0);
+          }
+		});
+        
+        galleryShoes.setOnItemClickListener(new OnItemClickListener() {
+        	@SuppressWarnings("rawtypes")
+        	public void onItemClick(AdapterView parent, View v, int position, long id) {
+        		Intent myIntent = new Intent(v.getContext(), GridGalleryActivity.class);
+        		myIntent.putExtra("Type", POSITION_TYPE.SHOES);
+        		myIntent.putExtra("Path", OutDir.SHOES);
+        		myIntent.putExtra("LayoutID", R.layout.grid_gallery_shoes);
+        		myIntent.putExtra("GridViewID", R.id.gridviewShoes);
+        		
+        		// vor dem Wechsel alle aktuell eingestellte Position aller Gallerys abspeichern
+        		setCurrentPositions();
+        		
+                startActivityForResult(myIntent, 0);
+          }
+		});
+       
+   
+    }
+    
+    private void setCurrentPositions(){
+    	PositionHolder.getInstance().setAccessoryPosition(galleryAccessories.getSelectedItemPosition());
+    	PositionHolder.getInstance().setTopPosition(galleryTops.getSelectedItemPosition());
+    	PositionHolder.getInstance().setBottomPosition(galleryBottoms.getSelectedItemPosition());
+    	PositionHolder.getInstance().setShoePosition(galleryShoes.getSelectedItemPosition());
+    }
+
+    
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.mainmenu, menu);
+        return true;
+    }
+    
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.save_outfit:
+            	OutfitStorage.getInstance(this).saveOutfit(galleryAccessories.getSelectedItemPosition(), 
+            			galleryTops.getSelectedItemPosition(), 
+            			galleryBottoms.getSelectedItemPosition(), 
+            			galleryShoes.getSelectedItemPosition());
+                return true;
+            case R.id.load_outfit:
+            	OutfitStorage.getInstance(this).loadOutfit();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+    
+    
+    public void setPositions( int accessoriesPostion, 
+			int topPostion, int bottomPostion, int shoesPosition){
+    	galleryAccessories.setSelection(accessoriesPostion);
+    	galleryTops.setSelection(topPostion);
+    	galleryBottoms.setSelection(bottomPostion);
+    	galleryShoes.setSelection(shoesPosition);
     }
 }
