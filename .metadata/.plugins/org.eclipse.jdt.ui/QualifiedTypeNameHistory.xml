@@ -31,6 +31,6 @@
 <fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="java.util.Calendar"/>
 <fullyQualifiedTypeName name="java.lang.Exception"/>
-<fullyQualifiedTypeName name="android.provider.MediaStore"/>
 <fullyQualifiedTypeName name="at.stoegprer.android.OutDir"/>
+<fullyQualifiedTypeName name="android.provider.MediaStore"/>
 </qualifiedTypeNameHistroy>

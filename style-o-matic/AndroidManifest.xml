@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="at.stoegprer.android"
+    package="at.docstoegprer.android"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -21,8 +21,8 @@
             </intent-filter>
         </activity>
         <activity android:name="CameraPreview" android:label="Camera"></activity>
-        <activity android:name="Camera"></activity>
-        <activity android:name="ItemPicker"></activity>
+        <activity android:name="at.docstoegprer.android.CamView"></activity>
+        <activity android:name="at.docstoegprer.android.ItemPicker"></activity>
     </application>
 
 </manifest>

@@ -1,0 +1,174 @@
+package at.docstoegprer.android;
+
+import java.io.IOException;
+
+import android.app.Activity;
+import android.graphics.PixelFormat;
+import android.hardware.Camera;
+import android.os.Bundle;
+import android.view.MotionEvent;
+import android.view.SurfaceHolder;
+import android.view.SurfaceView;
+import android.view.View;
+import android.view.View.OnLongClickListener;
+import android.view.View.OnTouchListener;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.TextView;
+
+public class CamView extends Activity  implements SurfaceHolder.Callback,
+OnLongClickListener, OnTouchListener {
+	
+	
+	private Camera camera;
+	private TextView logView;
+	private boolean isPreviewRunning = false;
+
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+
+		Window win = getWindow();
+
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		win.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+			WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+		win.setFormat(PixelFormat.TRANSLUCENT);
+
+		setContentView(R.layout.camera);
+
+		logView = (TextView) findViewById(R.id.log);
+
+		if (logView != null) {
+			logView.bringToFront();
+			bindMotionListeners((View) logView);
+		}
+
+		SurfaceView camView = (SurfaceView) findViewById(R.id.cam);
+
+		if (camView != null) {
+			// Install SurfaceHolder.Callback to listen for create, change, and
+			// delete notifications on underlying surface
+			SurfaceHolder holder = camView.getHolder();
+			holder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
+			holder.addCallback(this);
+
+			bindMotionListeners((View) camView);
+		}
+	}
+
+	public void bindMotionListeners (View view) {
+		if (view != null) {
+			view.setLongClickable(true);
+			view.setOnLongClickListener(this);
+			view.setOnTouchListener(this);
+		}
+	}
+
+	public void surfaceCreated (SurfaceHolder holder) {
+		try {
+			camera = Camera.open();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void surfaceChanged (SurfaceHolder holder, int format, int w, int h) {
+		if (camera == null) {
+			return;
+		}
+
+		// calling stopPreview will crash if preview is not running
+		if (isPreviewRunning) {
+			camera.stopPreview();
+		}
+
+		Camera.Parameters camParams = camera.getParameters();
+		camParams.setPreviewSize(w, h);
+
+		try {
+			camera.setPreviewDisplay(holder);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		camera.startPreview();
+
+		isPreviewRunning = true;
+	}
+
+	public void surfaceDestroyed (SurfaceHolder holder) {
+		if (camera != null) {
+			camera.stopPreview();
+			camera.release();
+			camera = null;
+		}
+
+		isPreviewRunning = false;
+	}
+
+	private void log (String s) {
+		if (logView != null) {
+			logView.setText(s + "\n" + logView.getText());
+		}
+
+		System.out.println(s);
+	}
+
+	public boolean onLongClick (View view) {
+		log("long click called on " + view.toString());
+		return false;
+	}
+
+	public boolean onTouch(View view, MotionEvent event) {
+		dumpEvent(event);
+
+		switch (event.getAction() & MotionEvent.ACTION_MASK) {
+		case MotionEvent.ACTION_POINTER_DOWN:
+				// out.println();
+			break;
+		}
+
+		// Return false so that the event continues on to longClick
+		return false;
+	}
+
+	private void dumpEvent(MotionEvent event) {
+		int actionCode = event.getAction() & MotionEvent.ACTION_MASK;
+		String actions[] = {
+			"DOWN",
+			"UP",
+			"MOVE",
+			"CANCEL",
+			"OUTSIDE",
+			"POINTER_DOWN",
+			"POINTER_UP",
+			"7?",
+			"8?",
+			"9?"
+		};
+		StringBuilder sb = new StringBuilder();
+
+		sb.append("ACTION_").append(actions[actionCode]);
+
+		// Handle detection of motion of second pointer
+		if (actionCode == MotionEvent.ACTION_POINTER_UP ||
+				actionCode == MotionEvent.ACTION_POINTER_DOWN) {
+			int pId = MotionEvent.ACTION_POINTER_INDEX_MASK;
+			sb.append(" (").append(pId).append(")");
+		}
+
+		sb.append(" [");
+
+		int numPointers = event.getPointerCount();
+		for (int i = 0; i < numPointers; ++i) {
+			sb.append(" p").append(event.getPointerId(i));
+			sb.append("=").append((int) event.getX(i));
+			sb.append(",").append((int) event.getY(i));
+		}
+
+		sb.append(" ]");
+
+		log(sb.toString());
+	}
+}
