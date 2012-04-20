@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+	<SurfaceView
+	    android:id="@+id/cam"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:longClickable="true" />
+
+	<ImageView
+	    android:id="@+id/accessory"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:src="@drawable/accessory" />
+
+	<ImageView
+	    android:id="@+id/top"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:src="@drawable/top" />
+	
+	<ImageView
+	    android:id="@+id/bottom"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:src="@drawable/bottom" />
+
+		<ImageView
+	    android:id="@+id/shoes"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:src="@drawable/shoes" />
+		
+	
+</FrameLayout>
