@@ -142,13 +142,15 @@ public class CamView extends Activity implements SurfaceHolder.Callback {
 						file.close();
 						startActivity(new Intent(getBaseContext(), Main.class));
 					} catch (IOException e) {
-						Log.e("CamView", e.getMessage());
+						// TODO Auto-generated catch block
+						e.printStackTrace();
 					}
 					
 				}
 			});
 		} catch (FileNotFoundException e) {
-			Log.e("CamView", e.getMessage());
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		
 	}

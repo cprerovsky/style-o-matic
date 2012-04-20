@@ -148,7 +148,8 @@ public class CamView extends Activity implements SurfaceHolder.Callback {
 				}
 			});
 		} catch (FileNotFoundException e) {
-			Log.e("CamView", e.getMessage());
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		
 	}
