@@ -6,7 +6,6 @@ import android.app.Activity;
 import android.graphics.PixelFormat;
 import android.hardware.Camera;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.Window;
@@ -40,7 +39,7 @@ public class CamView extends Activity implements SurfaceHolder.Callback {
 	}
 
 	/**
-	 * will initialize the camera when the surface is initialized
+	 * will initialize the camera when the 
 	 */
 	public void surfaceCreated(SurfaceHolder holder) {
 		try {
@@ -62,7 +61,6 @@ public class CamView extends Activity implements SurfaceHolder.Callback {
 
 		Camera.Parameters camParams = camera.getParameters();
 		camParams.setPreviewSize(w, h);
-		
 
 		try {
 			camera.setPreviewDisplay(holder);
@@ -75,9 +73,6 @@ public class CamView extends Activity implements SurfaceHolder.Callback {
 		isPreviewRunning = true;
 	}
 
-	/**
-	 * release camera when the surface is destroyed
-	 */
 	public void surfaceDestroyed(SurfaceHolder holder) {
 		if (camera != null) {
 			camera.stopPreview();

@@ -62,7 +62,6 @@ public class CamView extends Activity implements SurfaceHolder.Callback {
 
 		Camera.Parameters camParams = camera.getParameters();
 		camParams.setPreviewSize(w, h);
-		
 
 		try {
 			camera.setPreviewDisplay(holder);

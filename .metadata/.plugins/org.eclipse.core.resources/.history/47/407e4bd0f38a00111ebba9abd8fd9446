@@ -6,47 +6,71 @@ import android.app.Activity;
 import android.graphics.PixelFormat;
 import android.hardware.Camera;
 import android.os.Bundle;
-import android.util.Log;
+import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
+import android.view.View;
+import android.view.View.OnLongClickListener;
+import android.view.View.OnTouchListener;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
+import android.widget.TextView;
 
 public class CamView extends Activity implements SurfaceHolder.Callback {
 
 	private Camera camera;
+	private TextView logView;
 	private boolean isPreviewRunning = false;
 
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		// setup window features
 		Window win = getWindow();
+
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		win.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
 				WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
 		win.setFormat(PixelFormat.TRANSLUCENT);
 
 		setContentView(R.layout.camera);
 
-		// prepare camera
+		
+//		logView = (TextView) findViewById(R.id.log);
+//
+//		if (logView != null) {
+//			logView.bringToFront();
+//			bindMotionListeners((View) logView);
+//		}
+
 		SurfaceView camView = (SurfaceView) findViewById(R.id.cam);
+
 		if (camView != null) {
+			// Install SurfaceHolder.Callback to listen for create, change, and
+			// delete notifications on underlying surface
 			SurfaceHolder holder = camView.getHolder();
 			holder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
 			holder.addCallback(this);
+
+//			bindMotionListeners((View) camView);
 		}
 
 	}
 
-	/**
-	 * will initialize the camera when the surface is initialized
-	 */
+//	public void bindMotionListeners(View view) {
+//		if (view != null) {
+//			view.setLongClickable(true);
+//			view.setOnLongClickListener(this);
+//			view.setOnTouchListener(this);
+//		}
+//	}
+
 	public void surfaceCreated(SurfaceHolder holder) {
 		try {
 			camera = Camera.open();
 		} catch (Exception e) {
-			Log.e("CamView", e.getMessage());
+			e.printStackTrace();
 		}
 	}
 
@@ -62,7 +86,6 @@ public class CamView extends Activity implements SurfaceHolder.Callback {
 
 		Camera.Parameters camParams = camera.getParameters();
 		camParams.setPreviewSize(w, h);
-		
 
 		try {
 			camera.setPreviewDisplay(holder);
@@ -75,9 +98,6 @@ public class CamView extends Activity implements SurfaceHolder.Callback {
 		isPreviewRunning = true;
 	}
 
-	/**
-	 * release camera when the surface is destroyed
-	 */
 	public void surfaceDestroyed(SurfaceHolder holder) {
 		if (camera != null) {
 			camera.stopPreview();

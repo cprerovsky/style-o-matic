@@ -62,7 +62,6 @@ public class CamView extends Activity implements SurfaceHolder.Callback {
 
 		Camera.Parameters camParams = camera.getParameters();
 		camParams.setPreviewSize(w, h);
-		
 
 		try {
 			camera.setPreviewDisplay(holder);
@@ -75,9 +74,6 @@ public class CamView extends Activity implements SurfaceHolder.Callback {
 		isPreviewRunning = true;
 	}
 
-	/**
-	 * release camera when the surface is destroyed
-	 */
 	public void surfaceDestroyed(SurfaceHolder holder) {
 		if (camera != null) {
 			camera.stopPreview();
