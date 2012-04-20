@@ -28,23 +28,23 @@ public final class R {
     public static final class id {
         public static final int accessories=0x7f070001;
         public static final int bottoms=0x7f070003;
-        public static final int button1=0x7f070009;
         public static final int cam=0x7f070000;
-        public static final int galleryAccessories=0x7f07000a;
-        public static final int galleryBottoms=0x7f07000c;
-        public static final int galleryShoes=0x7f07000d;
-        public static final int galleryTops=0x7f07000b;
+        public static final int galleryAccessories=0x7f070009;
+        public static final int galleryBottoms=0x7f07000b;
+        public static final int galleryShoes=0x7f07000c;
+        public static final int galleryTops=0x7f07000a;
         public static final int gridviewAccessories=0x7f070005;
         public static final int gridviewBottoms=0x7f070006;
         public static final int gridviewShoes=0x7f070007;
         public static final int gridviewTops=0x7f070008;
-        public static final int load_outfit=0x7f070013;
-        public static final int menu_accessories=0x7f07000e;
-        public static final int menu_bottoms=0x7f070010;
-        public static final int menu_shoes=0x7f070011;
-        public static final int menu_tops=0x7f07000f;
-        public static final int save_outfit=0x7f070012;
+        public static final int load_outfit=0x7f070012;
+        public static final int menu_accessories=0x7f07000d;
+        public static final int menu_bottoms=0x7f07000f;
+        public static final int menu_shoes=0x7f070010;
+        public static final int menu_tops=0x7f07000e;
+        public static final int save_outfit=0x7f070011;
         public static final int shoes=0x7f070004;
+        public static final int take_picture=0x7f070013;
         public static final int tops=0x7f070002;
     }
     public static final class layout {
@@ -73,6 +73,7 @@ public final class R {
         public static final int menu_load=0x7f04000b;
         public static final int menu_save=0x7f040002;
         public static final int selectPic=0x7f040007;
+        public static final int take_picture=0x7f04000c;
     }
     public static final class style {
         public static final int Accessories=0x7f050000;

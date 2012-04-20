@@ -148,7 +148,7 @@ public class Main extends Activity {
             	OutfitStorage.getInstance(this).loadOutfit();
                 return true;
             case R.id.take_picture:
-            	startActivity(new Intent(getBaseContext(), CamView.class));
+            	
             	return true;
             default:
                 return super.onOptionsItemSelected(item);

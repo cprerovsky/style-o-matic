@@ -4,6 +4,4 @@
              android:title="@string/menu_save" />
        <item android:id="@+id/load_outfit"
              android:title="@string/menu_load" />
-       <item android:id="@+id/take_picture"
-             android:title="@string/take_picture" />
 </menu>

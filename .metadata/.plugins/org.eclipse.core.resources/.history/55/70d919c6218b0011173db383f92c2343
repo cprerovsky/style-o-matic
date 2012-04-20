@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello Style-o-matic</string>
+    <string name="app_name">Style-o-matic</string>
+    <string name="menu_save">Save</string>
+	<string name="gallery_top">Tops</string>
+	<string name="galleryBottoms">Bottoms</string>
+	<string name="galleryAccessories">Accessories</string>
+	<string name="galleryShoes">Shoes</string>
+	<string name="selectPic">Select Picture</string>
+	<string name="gallery_bottoms">Bottoms</string>
+	<string name="gallery_shoes">Shoes</string>
+	<string name="gallery_accessories">Accessories</string>
+	<string name="menu_load">Load</string>
+
+</resources>

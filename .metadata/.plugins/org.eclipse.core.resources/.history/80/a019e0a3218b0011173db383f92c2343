@@ -73,7 +73,7 @@ public class ImageAdapter extends BaseAdapter {
 	    
         imageView.setLayoutParams(new Gallery.LayoutParams(300, 200));
         imageView.setScaleType(ImageView.ScaleType.FIT_XY);
-//        imageView.setBackgroundResource(mGalleryItemBackground);
+        imageView.setBackgroundResource(mGalleryItemBackground);
 
         return imageView;
 

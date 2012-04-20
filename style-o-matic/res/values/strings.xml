@@ -13,5 +13,6 @@
 	<string name="gallery_shoes">Shoes</string>
 	<string name="gallery_accessories">Accessories</string>
 	<string name="menu_load">Load</string>
+	<string name="take_picture">Take picture</string>
 
 </resources>
