@@ -125,6 +125,8 @@ public class CamView extends Activity implements SurfaceHolder.Callback {
 			picOutDir = OutDir.SHOES;
 		}
 		
+		camera.stopPreview();
+		
 		Date date = new Date();
 		File path = new File(Environment.getExternalStorageDirectory(), picOutDir);
 		if (!path.exists()) {

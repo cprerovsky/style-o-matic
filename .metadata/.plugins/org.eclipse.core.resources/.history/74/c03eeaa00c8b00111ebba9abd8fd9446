@@ -140,6 +140,7 @@ public class CamView extends Activity implements SurfaceHolder.Callback {
 					try {
 						file.write(data);
 						file.close();
+						camera.release();
 						startActivity(new Intent(getBaseContext(), Main.class));
 					} catch (IOException e) {
 						// TODO Auto-generated catch block
