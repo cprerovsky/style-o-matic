@@ -5,21 +5,19 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Date;
-import java.util.Iterator;
-import java.util.List;
 
 import android.app.Activity;
 import android.graphics.PixelFormat;
 import android.hardware.Camera;
 import android.hardware.Camera.CameraInfo;
 import android.hardware.Camera.PictureCallback;
-import android.hardware.Camera.Size;
 import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.Surface;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
@@ -194,21 +192,32 @@ public class CamView extends Activity implements SurfaceHolder.Callback {
 
 		// set cam parameters
 		Camera.Parameters camParams = camera.getParameters();
-		List<Camera.Size> sizes = camParams.getSupportedPictureSizes();
-		int height = sizes.get(0).height;
-		int width = sizes.get(0).width;
-		// find smallest available pic size
-		for (Iterator<Size> iterator = sizes.iterator(); iterator.hasNext();) {
-			Size size = (Size) iterator.next();
-			if (size.height < height) {
-				height = size.height;
-				width = size.width;
-			}
-		}
-		camParams.setPictureSize(width, height);
-		camera.setDisplayOrientation(180);
+		camParams.setPictureSize(240, 160);
 		camera.setParameters(camParams);
+		
+		camera.setDisplayOrientation(0);
+		android.hardware.Camera.CameraInfo info =
+	             new android.hardware.Camera.CameraInfo();
+	     android.hardware.Camera.getCameraInfo(CameraInfo.CAMERA_FACING_BACK, info);
+	     int rotation = this.getWindowManager().getDefaultDisplay()
+	             .getRotation();
+	     int degrees = 0;
+	     switch (rotation) {
+	         case Surface.ROTATION_0: degrees = 0; break;
+	         case Surface.ROTATION_90: degrees = 90; break;
+	         case Surface.ROTATION_180: degrees = 180; break;
+	         case Surface.ROTATION_270: degrees = 270; break;
+	     }
 
+	     int result;
+	     if (info.facing == Camera.CameraInfo.CAMERA_FACING_FRONT) {
+	         result = (info.orientation + degrees) % 360;
+	         result = (360 - result) % 360;  // compensate the mirror
+	     } else {  // back-facing
+	         result = (info.orientation - degrees + 360) % 360;
+	     }
+	     camera.setDisplayOrientation(result);
+		
 		try {
 			camera.setPreviewDisplay(holder);
 		} catch (IOException e) {

@@ -198,7 +198,7 @@ public class CamView extends Activity implements SurfaceHolder.Callback {
 		int height = sizes.get(0).height;
 		int width = sizes.get(0).width;
 		// find smallest available pic size
-		for (Iterator<Size> iterator = sizes.iterator(); iterator.hasNext();) {
+		for (Iterator iterator = sizes.iterator(); iterator.hasNext();) {
 			Size size = (Size) iterator.next();
 			if (size.height < height) {
 				height = size.height;
