@@ -207,9 +207,7 @@ public class CamView extends Activity implements SurfaceHolder.Callback {
 			}
 		}
 		camParams.setPictureSize(width, height);
-		camParams.setRotation(180);
 		camera.setParameters(camParams);
-		setCameraDisplayOrientation(this, camera);
 
 		try {
 			camera.setPreviewDisplay(holder);
@@ -222,11 +220,6 @@ public class CamView extends Activity implements SurfaceHolder.Callback {
 		isPreviewRunning = true;
 	}
 
-	/**
-	 * set display orientation according to current rotation
-	 * @param activity
-	 * @param camera
-	 */
 	public static void setCameraDisplayOrientation(Activity activity,
 	         android.hardware.Camera camera) {
 	     android.hardware.Camera.CameraInfo info =
